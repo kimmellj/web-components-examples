@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Product Tile</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+
+  <style>
+    .product-tile__image {
+      width: 100%;
+    }
+
+    product-tile {
+        width: 20rem;
+        padding: 1rem;
+    }
+
+  </style>
+
+  <script src="main.js" defer></script>
+</head>
+
+<body class="d-flex flex-column h-100">
+  <main role="main" class="flex-shrink-0">
+    <div class="container-fluid">
+      <h1>Product Tile - Web Component</h1>
+
+      <div class="row" id="product-list">
+        <div class="col-auto">
+          <product-tile class="card">
+            <img slot="product-image" class="product-tile__image" src="https://image.shutterstock.com/image-illustration/computer-generated-render-generic-shoe-450w-36231955.jpg" />
+            <div slot="product-name" class="h3">Some Product Name</div>
+            <div slot="product-price">$79.99 <s>$120.00</s></div>
+            <div slot="product-ratings">3.3 out 5 stars</div>
+            <button slot="product-cta" class="btn btn-primary">Add to Cart</button>
+          </product-tile>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <link rel="import" href="template.html">
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!-- Product Tile Componet-->
+<template id="product-tile">
+    <style>
+        @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+
+        .product-tile {
+            width: 20rem;
+            border: 1px solid #2e2e2e;
+            padding: 2rem;
+        }
+    </style>
+    <div>
+        <div class="product-tile card">
+            <!-- Image -->
+            <div class="product-tile__image">
+                <slot name="product-image"></slot>
+            </div>
+
+            <div class="card-body">
+                <!-- Name -->
+                <h5 class="card-title product-tile__name">
+                    asdf
+                    <slot name="product-name">Product Name</slot>
+                </h5>
+
+                <p class="card-text">
+                    <!-- Price -->
+                    <div class="product-tile__price">
+                        <slot name="product-price">$0 - $1000</slot>
+                    </div>
+
+                    <!-- Ratings -->
+                    <div class="product-tile__ratings">
+                        <slot name="product-ratings">4.5 out 5 stars</slot>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="product-tile__cta">
+                        <slot name="product-cta"></slot>
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+</template>
